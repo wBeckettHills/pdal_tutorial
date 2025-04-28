@@ -5,7 +5,7 @@
 To get set up, there are two main components that will help. Plenty of support exists for how to run jupyter notebooks, so please see this guide as "a way" to get up and running.
 
 1. ```conda```<br>
-    This library uses python, which ```conda environments``` make much easier to handle. It is highly recommended to have a current, working version of ```conda``` or ```miniconda```. Proceeding without it is risky and should be done only when you are certain it is the best route for your application.
+    This library uses python, which ```conda environments``` make much easier to handle. It is highly recommended to have a current, working version of ```conda``` or ```miniconda```. Proceeding without may lead to package version issues and should be done only when you are certain it is the best route for your application.
 1. ```jupyter notebooks```<br>
     The use of notebooks helps get up and running quickly. While it is not required to use the library, it is recommended to use them as a template for how to use this library.
 
