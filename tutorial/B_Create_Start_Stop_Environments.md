@@ -38,17 +38,18 @@ conda install -c conda-forge -y geopandas geojson jupyter jupyterlab
 conda install -c conda-forge -y ipykernel ipywidgets matplotlib ipympl
 ```
 
+---
+  
 If all the packages installed without returning errors, then you should have everything inside the environment needed to proceed with the rest of the steps of the tutorial.
-
-For repeatable environments, an `environment.yml` file can be used for `conda` (`requirements.txt` for `pip`) and the actual package version number "pinned" to create exact rebuilds. This is a great practice beyond the scope of this intro, however, see the notes in Advanced Options as well as the example `YAML` file (`conda_env_cloudrunner.yaml`) provided with this repo.
-
---------
+  
+---
 
 # Appendix : Advanced Options
 
 This is only provided for future development or as a template for more advanced use.
 
 ## YAML File
+For repeatable environments, an `environment.yml` file can be used for `conda` and the actual package version number "pinned" to create exact rebuilds. This is a great practice beyond the scope of this intro, however, see the notes in Advanced Options as well as the example `YAML` file (`conda_env_cloudrunner.yaml`) provided with this repo.
 ```
 # Make a new conda environment
 conda env create -y --file conda_env_cloudrunner.yaml
