@@ -36,14 +36,18 @@ Restart the console or bash terminal. It should now begin with ```(base)``` to l
 
 ```(base) username@laptop:~$```
 
-<img src="https://github.com/wBeckettHills/pdal_tutorial/blob/development/graphics/CloudRunner-console-windows-gitbash.png?raw=true" align="right" width=35%>  
-  
+
 If you don't see ```(base)```, something happened that may require troubleshooting, or reinstalling, the miniconda installation.  
 
 <br/>
 
+<img src="https://github.com/wBeckettHills/pdal_tutorial/blob/development/graphics/CloudRunner-console-windows-gitbash.png?raw=true" align="right" width=35%>  
   
-  
+<br/>
+<p align="center">
+  -------
+</p>
+
 ## Notebooks
 
 ```Python Notebooks```
