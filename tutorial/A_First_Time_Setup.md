@@ -29,18 +29,19 @@ conda init
 ## 2. Restart consonle
 
 <p align="right">
-  <img src="https://github.com/wBeckettHills/pdal_tutorial/blob/development/graphics/CloudRunner-console-windows-conda.png?raw=true" width=45%>
+  
 </p>
 
-Restart the console or bash terminal. It should now begin with ```(base)``` to left of your user@device name, similar to what is shown in the images to the right:
+Restart the console or bash terminal. It should now begin with ```(base)``` to left of your user@device name, similar to what is shown in the images below:
 
 ```(base) username@laptop:~$```
 
-If you see ```(base)``` similar to above, proceed to the next steps.
+If you see ```(base)```, proceed to the next steps.
 
 If you don't see ```(base)```, something happened that may require troubleshooting, or reinstalling, the miniconda installation.
 
-<p align="right">
+<p align="center">
+  <img src="https://github.com/wBeckettHills/pdal_tutorial/blob/development/graphics/CloudRunner-console-windows-conda.png?raw=true" width=45%>
   <img src="https://github.com/wBeckettHills/pdal_tutorial/blob/development/graphics/CloudRunner-console-windows-gitbash.png?raw=true" width=45%>
 </p>
 
