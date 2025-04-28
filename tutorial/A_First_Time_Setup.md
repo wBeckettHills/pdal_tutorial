@@ -32,11 +32,9 @@ conda init
   
 </p>
 
-Restart the console or bash terminal. It should now begin with ```(base)``` to left of your user@device name, similar to what is shown in the images below:
+Restart the console or bash terminal. It should now begin with ```(base)``` to left of your user@device name, similar to what is shown in the images below. If you see ```(base)```, proceed to the next steps.
 
 ```(base) username@laptop:~$```
-
-If you see ```(base)```, proceed to the next steps.
 
 If you don't see ```(base)```, something happened that may require troubleshooting, or reinstalling, the miniconda installation.
 
