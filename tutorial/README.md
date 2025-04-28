@@ -9,16 +9,15 @@ To get set up, there are two main components that will help. Plenty of support e
 1. ```jupyter notebooks```<br>
     The use of notebooks helps get up and running quickly. While it is not required to use the library, it is recommended to use them as a template for how to use this library.
 
-The next section will guide through getting these two components setup and introduce some helpful tips and instructions for using conda and python within the context of this tutorial. 
+The next section will guide through setting up these two components and introduce some helpful tips and instructions for using `conda` and `python` within the context of this tutorial.
 
 ### Setup & Helpful Tips
 
-A. [First Time Setup](./A_First_Time_Setup.md)
+A. [First Time Setup](./A_First_Time_Setup.md) page goes through installing conda and setting up a way to run jupyter notebooks (VSCode or `jupyterlab`).
 
-B. [Creating, Starting, Stopping, Restarting Conda Environments](./B_Create_Start_Stop_Environments.md)
+B. [Conda Environment Use Tips](./B_Create_Start_Stop_Environments.md) includes creating, activating, and installing environments, as well as advanced info on using jupyterlab command line code for starting, stopping, restarting a local jupyter server instance.
 
-C. [Python Functions](./C_Python_Functions.md)
-
+C. [Python F-Strings and Functions](./C_Python_Functions.md) introduces a convient way this tutorial uses f-strings for variable construction, as well some background on how to use or extend the functions within the code library.
 
 ## Tutorial
 
