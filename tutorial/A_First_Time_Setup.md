@@ -50,7 +50,7 @@ To use jupyter notebooks, there are two good (free) options:
     - This is not an endorsement!
     - That said, VSCode handles different file types and has extensions for various languages and utilities (python, R, bash, markdown, JSON, CSV, jupyter notebooks), making it a bit easier to have one software that does it all
 2. ```Jupyterlab```
-    - this is a very simple, lightweight version for notebooks
+    - this is a very simple, lightweight, portable version for using notebooks
     - it can be installed and run within a conda environment to make package loading easy. 
         Generic usage example (it is best installed after primary packages, but this is the very basic use):
         ```
