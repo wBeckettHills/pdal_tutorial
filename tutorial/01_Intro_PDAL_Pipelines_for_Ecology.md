@@ -160,5 +160,3 @@ While using pre-processed LiDAR data offers a simpler path to analysis, drone-co
 1. Butler, H., et al. (2020). PDAL: An open source library for the processing and analysis of point clouds. *ScienceDirect*.
 
 2. Lefsky, M. A., Cohen, W. B., Parker, G. G., & Harding, D. J. (2002). Lidar remote sensing for ecosystem studies: Lidar, an emerging remote sensing technology that directly measures the three-dimensional distribution of plant canopies, can accurately estimate vegetation structural attributes and should be of particular interest to forest, landscape, and global ecologists. *BioScience*, 52(1), 19-30.
-
-... TODO ... add links, more content, supporting citations

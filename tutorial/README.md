@@ -9,12 +9,9 @@ To get set up, there are two main components that will help. Plenty of support e
 1. ```jupyter notebooks```<br>
     The use of notebooks helps get up and running quickly. While it is not required to use the library, it is recommended to use them as a template for how to use this library.
 
+The next section will guide through getting these two components setup and introduce some helpful tips and instructions for using conda and python within the context of this tutorial. 
 
-## LINKS
-
---- 
-
-## Prep
+### Setup & Helpful Tips
 
 A. [First Time Setup](./A_First_Time_Setup.md)
 
@@ -22,15 +19,14 @@ B. [Creating, Starting, Stopping, Restarting Conda Environments](./B_Create_Star
 
 C. [Python Functions](./C_Python_Functions.md)
 
----- 
 
-## Documents
+## Tutorial
 
-00. [Lecture Outline](./00_Lecture_Outline.md)
+### Outline
 
+00. [Tutorial Outline](./00_Lecture_Outline.md)
+
+
+### Intro
 01. [Introduction to LiDAR Processing with PDAL for Ecology](./01_Intro_PDAL_Pipelines_for_Ecology.md)
-
-02. [Fundamental LiDAR Processing Steps for Ecology](./02_Fundamental_Processing_for_Ecology.md)
-
-03. [Calculating Basic Metrics and Cloud Statistics for Ecology](./03_Calculating_Metrics_for_Ecology.md)
 
