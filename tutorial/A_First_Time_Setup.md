@@ -2,16 +2,15 @@
 
 It is important to use conda environments to manage the packages and dependencies. If you already have this installed, skip to step 2.
 
-## 1. Miniconda / Conda
+## 1. Install Miniconda or Anaconda
 
-First, download and install Miniconda if you haven't already. There are two options:
-1. Use the conda website
-1. If you are comfortable with command line options, the bash cell block provides a starting point
+First, download and install Miniconda / Anaconda if you haven't already. There are two options:
 
 ### 1. Conda website
 Follow instructions for your operating system [on this page](https://www.anaconda.com/docs/getting-started/miniconda/install).
 
 ### 2. Command line for Linux
+If you are comfortable with command line options, the bash cell block provides a starting point for a Linux installation. 
 
 ```
 # Download Miniconda installer
@@ -27,9 +26,18 @@ eval "$($HOME/miniconda/bin/conda shell.bash hook)"
 conda init
 ```
 
-Restart the bash terminal. It should now begin with ```(base)``` to left of your user@device name, similar to this:
+## 2. Restart consonle
+
+Restart the console or bash terminal. It should now begin with ```(base)``` to left of your user@device name, similar to what is shown in these images:
 
 ```(base) username@laptop:~$```
+
+
+<img src="https://github.com/wBeckettHills/pdal_tutorial/blob/development/graphics/CloudRunner-console-windows-conda.png?raw=true" align='left' width=35%>
+
+<img src="https://github.com/wBeckettHills/pdal_tutorial/blob/development/graphics/CloudRunner-console-windows-gitbash.png?raw=true" align='right' width=35%>
+
+
 
 If you see ```(base)``` proceed to the next steps.
 
