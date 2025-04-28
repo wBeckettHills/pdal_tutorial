@@ -33,16 +33,15 @@ Restart the console or bash terminal. It should now begin with ```(base)``` to l
 ```(base) username@laptop:~$```
 
 
-<img src="https://github.com/wBeckettHills/pdal_tutorial/blob/development/graphics/CloudRunner-console-windows-conda.png?raw=true" align='left' width=35%>
+<img src="https://github.com/wBeckettHills/pdal_tutorial/blob/development/graphics/CloudRunner-console-windows-conda.png?raw=true" align='left' width=45%>
 
-<img src="https://github.com/wBeckettHills/pdal_tutorial/blob/development/graphics/CloudRunner-console-windows-gitbash.png?raw=true" align='right' width=35%>
+<img src="https://github.com/wBeckettHills/pdal_tutorial/blob/development/graphics/CloudRunner-console-windows-gitbash.png?raw=true" align='right' width=45%>
 
+<br>------<br>
 
-
-If you see ```(base)``` proceed to the next steps.
+If you see ```(base)``` similar to above, proceed to the next steps.
 
 If you don't see ```(base)```, something happened that may require troubleshooting, or reinstalling, the miniconda installation.
-
 
 
 ## ```Jupyter Notebooks```
