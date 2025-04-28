@@ -6,10 +6,10 @@ It is important to use conda environments to manage the packages and dependencie
 
 First, download and install Miniconda / Anaconda if you haven't already. There are two options:
 
-### i. Conda website
+### a. Conda website
 Follow instructions for your operating system [on this page](https://www.anaconda.com/docs/getting-started/miniconda/install).
 
-### ii. Command line for Linux
+### b. Command line for Linux
 If you are comfortable with command line options, the bash cell block provides a starting point for a Linux installation. 
 
 ```
@@ -26,7 +26,7 @@ eval "$($HOME/miniconda/bin/conda shell.bash hook)"
 conda init
 ```
 
-## 2. Restart consonle
+## 2. Restart console
 
 Restart the console or bash terminal. It should now begin with ```(base)``` to left of your user@device name, similar to the examples in the images below. If you see ```(base)```, proceed to the next steps.
 
