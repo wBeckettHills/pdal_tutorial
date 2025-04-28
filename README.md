@@ -1,6 +1,6 @@
 # CloudRunner
 
-<img src="https://github.com/wBeckettHills/pdal_tutorial/blob/main/graphics/CloudRunnner-oblique.png?raw=true" align='right' width=55%>
+<img src="https://github.com/wBeckettHills/pdal_tutorial/blob/development/graphics/CloudRunnner-oblique.png?raw=true" align='right' width=55%>
 
 <br>
 
