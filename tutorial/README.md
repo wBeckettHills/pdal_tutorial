@@ -19,6 +19,12 @@ B. [Conda Environment Use Tips](./B_Create_Start_Stop_Environments.md) includes 
 
 C. [Python F-Strings and Functions](./C_Python_Functions.md) introduces a convient way this tutorial uses f-strings for variable construction, as well some background on how to use or extend the functions within the code library.
 
+Advanced Options:
+D. [Conda Environment Reproducibility](./D_Advanced_CondaYAML.md) introduces the concept of using a YAML file to create an exact rebuild of an environment.
+
+E. [Jupyter Lab](./E_Advanced_JupyterLab.md) shows an example and steps for using jupyter lab within a conda environment.
+
+
 ## Tutorial Reading
 
 00. [Tutorial Outline](./00_Lecture_Outline.md)
