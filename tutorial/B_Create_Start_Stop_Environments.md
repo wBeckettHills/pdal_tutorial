@@ -53,7 +53,6 @@ This is only provided for future development or as a template for more advanced 
 ```
 # Make a new conda environment
 conda env create -y --file conda_env_cloudrunner.yaml
-
 ```
 
 # JupyterLab Command line
@@ -68,7 +67,6 @@ Activate an environment that contains jupyterlab:
 
 ```
 conda activate cloudrunner
-
 ```
 
 ### 2. Run jupyter lab instance
@@ -77,7 +75,6 @@ conda activate cloudrunner
 
 ```
 jupyter lab --port=8090 --ip "*" --notebooks ./pdal_tutorial/
-
 ```
 
 ### 3. Open Web Browser 
@@ -125,7 +122,6 @@ Do not close the console window, as this will kill the server.
 
 ```
 jupyter lab --port=48001 --ip "*" --notebooks ${base_project_dir}
-
 ```
 
 ### 4. Open Web Browser 
