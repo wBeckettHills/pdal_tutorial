@@ -1,8 +1,8 @@
 
 
-# CREATE Environment
+# CONDA Environments
 
-There are multiple ways to create an environment and install packages. To keep it simple, using `conda install` is the primary option recommended for using anything in this repo. 
+There are multiple ways to create conda environments and install packages. To keep it simple, using `conda install` from the command line is the primary tested option recommended for use with this repo. 
 
 In preparation for future guides, there are *Advanced* methods also shown below. These may not work as expected due to the rapid developments of this project over time. They are best viewed as examples to start with as a template.
 
