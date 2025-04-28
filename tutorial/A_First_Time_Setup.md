@@ -44,9 +44,6 @@ If you don't see ```(base)```, something happened that may require troubleshooti
 <img src="https://github.com/wBeckettHills/pdal_tutorial/blob/development/graphics/CloudRunner-console-windows-gitbash.png?raw=true" align="right" width=35%>  
   
 <br/>
-<p align="center">
-  -------
-</p>
 
 ## Notebooks
 
