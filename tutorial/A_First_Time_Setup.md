@@ -46,10 +46,10 @@ If you don't see ```(base)```, something happened that may require troubleshooti
 There are multiple options for using jupyter. If you are familiar with and already have an established way to use them, then proceed to the next notebook. This has not been tested in Google Collab environments and may not work as expected.
 
 To use jupyter notebooks, there are two good (free) options:
-A. ```VS Code```  - [Visual Studio Code](https://code.visualstudio.com/download)
+1. ```VS Code```  - [Visual Studio Code](https://code.visualstudio.com/download)
     - This is not an endorsement!
     - That said, VSCode handles different file types and has extensions for various languages and utilities (python, R, bash, markdown, JSON, CSV, jupyter notebooks), making it a bit easier to have one software that does it all
-B. ```Jupyterlab```
+2. ```Jupyterlab```
     - this is a very simple, lightweight version for notebooks
     - it can be installed and run within a conda environment to make package loading easy. 
         Generic usage example (it is best installed after primary packages, but this is the very basic use):
