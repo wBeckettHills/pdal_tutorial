@@ -11,7 +11,7 @@ To get set up, there are two main components that will help. Plenty of support e
 
 The next section will guide through setting up these two components and introduce some helpful tips and instructions for using `conda` and `python` within the context of this tutorial.
 
-### Setup & Helpful Tips
+## Setup & Helpful Tips
 
 A. [First Time Setup](./A_First_Time_Setup.md) page goes through installing conda and setting up a way to run jupyter notebooks (VSCode or `jupyterlab`).
 
@@ -19,13 +19,9 @@ B. [Conda Environment Use Tips](./B_Create_Start_Stop_Environments.md) includes 
 
 C. [Python F-Strings and Functions](./C_Python_Functions.md) introduces a convient way this tutorial uses f-strings for variable construction, as well some background on how to use or extend the functions within the code library.
 
-## Tutorial
-
-### Outline
+## Tutorial Reading
 
 00. [Tutorial Outline](./00_Lecture_Outline.md)
 
-
-### Intro
 01. [Introduction to LiDAR Processing with PDAL for Ecology](./01_Intro_PDAL_Pipelines_for_Ecology.md)
 

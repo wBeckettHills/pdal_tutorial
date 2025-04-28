@@ -9,11 +9,15 @@ In preparation for future guides, there are *Advanced* methods also shown below.
 
 ## 1. Create an Environment
 
-```conda create -n lidar_env "python=3.13"```
+```
+conda create -n lidar_env "python=3.13"
+```
 
 ## 2. Activate Environment
 
-```conda activate lidar_env```
+```
+conda activate lidar_env
+```
 
 ## 3. Install Packages
 
