@@ -42,6 +42,9 @@ If you don't see ```(base)```, something happened that may require troubleshooti
 <br/>
 <img src="https://github.com/wBeckettHills/pdal_tutorial/blob/development/graphics/CloudRunner-console-windows-gitbash.png?raw=true" align="right" width=55%>
 
+<br>
+<br/>
+
 ## ```Jupyter Notebooks```
 
 There are multiple options for using jupyter. If you are familiar with and already have an established way to use them, then proceed to the next notebook. This has not been tested in Google Collab environments and may not work as expected.
