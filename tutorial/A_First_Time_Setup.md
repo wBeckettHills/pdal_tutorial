@@ -6,10 +6,10 @@ It is important to use conda environments to manage the packages and dependencie
 
 First, download and install Miniconda / Anaconda if you haven't already. There are two options:
 
-### 1. Conda website
+### i. Conda website
 Follow instructions for your operating system [on this page](https://www.anaconda.com/docs/getting-started/miniconda/install).
 
-### 2. Command line for Linux
+### ii. Command line for Linux
 If you are comfortable with command line options, the bash cell block provides a starting point for a Linux installation. 
 
 ```
