@@ -23,8 +23,6 @@ conda activate lidar_env
 
 For the purposes of this tutorial, `conda` is the ideal way to install the packages. Installing `GDAL` into packages can sometimes be problematic with `pip`, so while `conda` is much slower for installing, when building new environments it helps to stay consistent with `conda` or `pip` as the primary way to install. This is a nuanced topic with many caveats and reasonable scenarios where conda, pip, and custom makefiles or git repo installs can all be carefully installed and used within one environment. 
 
-For repeatable environments, a `environment.yml` file can be used for `conda` (`requirements.txt` for `pip`) and the actual package version number "pinned" to create exact rebuilds. This is a great practice beyond the scope of this intro, however, see the supporting files provided with advanced examples you can use to practice.
-
 ### `conda install`
 
 Building an environment with geospatial libraries such as `GDAL` can benefit from installing them in groups, starting with the base dependencies and finishing with extra libaries for plotting or `ipython` notebook widgets.
@@ -42,6 +40,7 @@ conda install -c conda-forge -y ipykernel ipywidgets matplotlib ipympl
 
 If all the packages installed without returning errors, then you should have everything inside the environment needed to proceed perform the steps of the tutorial.
 
+For repeatable environments, an `environment.yml` file can be used for `conda` (`requirements.txt` for `pip`) and the actual package version number "pinned" to create exact rebuilds. This is a great practice beyond the scope of this intro, however, see the notes in Advanced Options as well as the example `YAML` file (`conda_env_cloudrunner.yaml`) provided with this repo.
 
 --------
 
