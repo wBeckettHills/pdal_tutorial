@@ -29,10 +29,12 @@ conda init
 ## 2. Restart consonle
 
 <img src="https://github.com/wBeckettHills/pdal_tutorial/blob/development/graphics/CloudRunner-console-windows-conda.png?raw=true" align='right' width=45%>
-<br/>
-<img src="https://github.com/wBeckettHills/pdal_tutorial/blob/development/graphics/CloudRunner-console-windows-gitbash.png?raw=true" align='right' width=45%>
+
 
 Restart the console or bash terminal. It should now begin with ```(base)``` to left of your user@device name, similar to what is shown in the images to the right:
+
+<img src="https://github.com/wBeckettHills/pdal_tutorial/blob/development/graphics/CloudRunner-console-windows-gitbash.png?raw=true" align='right' width=45%>
+
 
 ```(base) username@laptop:~$```
 
