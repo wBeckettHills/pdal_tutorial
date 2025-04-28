@@ -1,8 +1,6 @@
-# Functions
-
+# Python Tips
 
 ## F-strings
-
 F-strings are very convenient way to use python's object-oriented design to enhance readability and efficiency of code by concatenating the string together with variables or other more complex functions.
 
 As an example with variables, they can be passed within `{}` if the string has an `f` prefix (no space!) on the string.
@@ -31,74 +29,66 @@ filepath = f"{wd}/{basename}.las"
 
 ```
 
-This format is frequently used in the repo notebooks to help guide the steps being presented.
 
+## Using and Importing this Code
+Python scripts and functions can be used in many ways. This repo uses a simple approach by keeping scripts with functions within particular relative directories to the notebooks being used.
 
-## Importing
+### Scripts with Functions 
+Python functions contained in scripts is a convenient way to use them for code execution in jupyter cell blocks or other stand-alone scripts. This is simply 'a way' to illustrate the ability to modularize and more easily customize code to enhance workflows over time. 
 
-A note on functions and re-using these scripts:
+The tutorial directory needs to be structured so the python `.py` files with the functions are located in directories `cloudrunner`, `notebooks`, `scripts`, and `tutorials` relatively located within the main working directory as outlined in the **Tree Diagram** section below. This ensures the notebooks can successfully `import` the python support scripts without issue.
 
-### "A WAY to do it"
-Using functions contained in scripts  is a powerful way to leverage code execution in stand-alone scripts or in jupyter cell blocks. This can be done in many different ways. This is simply 'a way' to illustrate the ability to modularize and more easily customize code to enhance workflows over time. If moved or reused elsewhere, the tutorial directory needs to be structured like below so the relative paths for `cloudrunner`, `notebooks`, `scripts`, and `tutorials` are located in the correct place to ensure the notebooks can effectively locate and `import` the python support scripts without issue.
+The directories are separated by . with the import function(s) trailing:
+```
+from cloudrunner.multi.runtile_classify import runtile_classify
+```
 
+The imported function can now available to be run:
+```
+runtile_classify(las_tile_path)
+```
+#### Tree Diagram
+The filetree example below that shows how the directory structure can be used to access the functions within python files.
 
 ```
 pdal_tutorial/
-├── cloudrunner
-│   ├── __init__.py
-│   ├── multi
-│   │   ├── __init__.py
-│   │   ├── README.md
-│   │   ├── runtile_classify.py
-│   │   ├── runtile_clean.py
-│   │   ├── runtile_rasters_basics.py
-│   │   ├── runtile_R-treeseg.R
-│   │   ├── runtile_stats.py
-│   │   └── runtile_treeseg.py
-│   ├── pipelines
-│   │   ├── 01_burntile.json
-│   │   ├── 02_radialdensity.json
-│   │   ├── 03_hag.json
-│   │   ├── 04_eigen.json
-│   │   ├── 05_covar.json
-│   │   ├── 06_clip.json
-│   │   ├── 07_burnTreeSN.json
-│   │   ├── 08_exchangeZ.json
-│   │   ├── 09_idw_chm.json
-│   │   ├── 10_las_csv.json
-│   │   ├── __init__.py
-│   │   ├── pipelines.tar.gz
-│   │   ├── README.md
-│   │   └── test_colorize.json
-│   └── single
-│       ├── README.md
-│       └── test_colorize.py
-├── notebooks
-│   ├── 00-CloudRunner-Conda_Jupyter.ipynb
-│   └── 01-CloudRunner-Getting_Started.ipynb
-├── scripts
-│   ├── aggregateTrees.py
-│   ├── bufferPoints.py
-│   ├── examineGPStime.py
-│   ├── makeCHTCconfig_lidar.py
-│   ├── mergeCOPC.py
-│   ├── README.md
-│   └── saveLAIfigs.py
-└── tutorials
-    ├── 00_Lecture_Outline.md
-    ├── 01_Intro_PDAL_Pipelines_for_Ecology.md
-    ├── A_First_Time_Setup.md
-    ├── B_Create_Start_Stop_Environments.md
-    ├── C_Python_Functions.md
-    └── README.md
-
-
+    ├── cloudrunner
+    │   ├── multi
+    │   │   ├── runtile_classify.py
+    │   │   ├── runtile_clean.py
+    │   │   ├── runtile_rasters_basics.py
+    │   │   ├── runtile_R-treeseg.R
+    │   │   ├── runtile_stats.py
+    │   │   └── runtile_treeseg.py
+    │   ├── pipelines
+    │   │   ├── 00_test_colorize.json
+    │   │   ├── 01_burntile.json
+    │   │   ├── 02_radialdensity.json
+    │   │   ├── 03_hag.json
+    │   │   ├── 04_eigen.json
+    │   │   ├── 05_covar.json
+    │   │   ├── 06_clip.json
+    │   │   ├── 07_burnTreeSN.json
+    │   │   ├── 08_exchangeZ.json
+    │   │   ├── 09_idw_chm.json
+    │   │   └── 10_las_csv.json
+    │   └── single
+    │       └── test_colorize.py
+    ├── data
+    │   ├── lidar
+    │   │   ├── raw
+    │   │   └── tiles
+    │   ├── shapes
+    │   └── tif
+    ├── notebooks
+    │   ├── 00-CloudRunner-Conda_Jupyter.ipynb
+    │   └── 01-CloudRunner-Getting_Started.ipynb
+    ├── scripts
+    │   ├── aggregateTrees.py
+    │   ├── bufferPoints.py
+    │   ├── examineGPStime.py
+    │   ├── makeCHTCconfig_lidar.py
+    │   ├── mergeCOPC.py
+    │   └── saveLAIfigs.py
+    └── tutorial
 ```
-
-### Better way: Code library
-The above method is for simplicity, modularity, and repeatability, however, it is more complicated for versioning, maintaining, or quickly adapting to other situations. Creating a code library that can be imported would be the next step toward creating modular code that is also more adaptable.
-
-Future steps will include how to use and install this library as a standalone package.
-
-```import cloudrunner```
-
