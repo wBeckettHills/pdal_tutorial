@@ -42,10 +42,12 @@ If you don't see ```(base)```, something happened that may require troubleshooti
 <img src="https://github.com/wBeckettHills/pdal_tutorial/blob/development/graphics/CloudRunner-console-windows-gitbash.png?raw=true" align="right" width=35%>
 
 <br/>
+<p>/</p>
+## Notebooks
 
-## ```Jupyter Notebooks```
+```Python Notebooks```
 
-There are multiple options for using jupyter. If you are familiar with and already have an established way to use them, then proceed to the next notebook. This has not been tested in Google Collab environments and may not work as expected.
+There are multiple options for using ipython notebooks. If you are familiar with and already have an established way to use them, then proceed to the next notebook. This has not been tested in Google Collab environments and may not work as expected.
 
 To use jupyter notebooks, there are two good (free) options:
 1. ```VS Code```  - [Visual Studio Code](https://code.visualstudio.com/download)
