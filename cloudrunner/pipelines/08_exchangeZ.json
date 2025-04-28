@@ -1,0 +1,19 @@
+[
+    {
+        "type": "readers.las",
+        "filename": ""
+    },
+    {
+        "type": "filters.ferry",
+        "dimensions": "HeightAboveGround => Z"
+    },
+    {
+        "type": "writers.las",
+        "filename": "",
+        "minor_version": "4",
+        "dataformat_id": "8",
+        "scale_z": "1.0",
+        "extra_dims": "all",
+        "forward": "all"
+    }
+]

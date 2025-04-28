@@ -1,0 +1,26 @@
+[
+    {
+        "type": "readers.las",
+        "filename": ""
+    },
+    {
+        "type": "filters.optimalneighborhood",
+        "min_k": 10,
+        "max_k": 100
+    },
+    {
+        "type": "filters.covariancefeatures",
+        "knn": "100",
+        "threads": "1",
+        "optimized": "true",
+        "feature_set": "Dimensionality,Eigenentropy,EigenvalueSum,Density,Anisotropy,Omnivariance,SurfaceVariation,DemantkeVerticality",
+        "mode": "Normalized"
+    },
+    {
+        "type": "writers.las",
+        "minor_version": "4",
+        "extra_dims": "all",
+        "forward": "all",
+        "filename": ""
+    }
+]

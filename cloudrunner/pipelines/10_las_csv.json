@@ -1,0 +1,13 @@
+[
+    {
+        "type": "readers.las",
+        "filename": ""
+    },
+    {
+        "type":"writers.text",
+        "format":"csv",
+        "keep_unspecified":"false",
+        "filename": "",
+        "where":"(HeightAboveGround >= 2.0)"
+    }
+]

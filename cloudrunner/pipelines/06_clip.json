@@ -1,0 +1,28 @@
+[
+    {
+        "type": "readers.las",
+        "filename": ""
+    },
+    {
+        "type": "filters.range",
+        "limits": "Buffer[0:0]"
+    },
+    {
+        "column": "SymbolID",
+        "datasource": "",
+        "dimension": "Buffer",
+        "layer": "",
+        "type": "filters.overlay"
+    },
+    {
+        "type": "filters.range",
+        "limits": "Buffer![1:5]"
+    },
+    {
+        "type": "writers.las",
+        "filename": "",
+        "minor_version": "4",
+        "extra_dims": "all",
+        "forward": "all"
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "type": "readers.las",
+        "filename": ""
+    },
+    {
+        "type": "filters.radialdensity",
+        "radius": 0.01
+    },
+    {
+        "type": "writers.las",
+        "minor_version": "4",
+        "extra_dims": "RadialDensity=float32,Buffer=int16",
+        "forward": "all",
+        "filename": ""
+    }
+]

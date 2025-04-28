@@ -1,0 +1,18 @@
+[
+    {
+        "type": "readers.las",
+        "filename": ""
+    },
+    {
+        "filename": "",
+        "gdaldriver": "ENVI",
+        "dimension": "HeightAboveGround",
+        "output_type": "idw",
+        "data_type": "float32",
+        "resolution": "0.25",
+        "radius": 12,
+        "power": 3,
+        "window_size": 24,
+        "type": "writers.gdal"
+    }
+]

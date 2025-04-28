@@ -1,0 +1,25 @@
+name: cloudrunner
+channels:
+  - conda-forge
+  - anaconda
+  - defaults
+dependencies:
+  - python=3.13
+  - setuptools
+  - wheel
+  - proj
+  - numpy
+  - pyproj
+  - geos
+  - scipy
+  - gdal
+  - libgdal
+  - pdal
+  - python-pdal
+  - geopandas
+  - geojson
+  - jupyter
+  - jupyterlab
+  - ipykernel
+  - ipywidgets
+  - matplotlib

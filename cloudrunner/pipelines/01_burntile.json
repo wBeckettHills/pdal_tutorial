@@ -1,0 +1,47 @@
+[
+    {
+        "type": "readers.las",
+        "filename": ""
+    },
+    {
+        "type": "filters.range",
+        "limits": "Z[285:305]"
+    },
+    {
+        "type": "filters.ferry",
+        "dimensions": "=>Buffer"
+    },
+    {
+        "type": "filters.assign",
+        "value": "Buffer = 3"
+    },
+    {
+        "type": "filters.assign",
+        "value": "Classification = 0"
+    },
+    {
+        "column": "Buffer",
+        "datasource": "",
+        "dimension": "Buffer",
+        "layer": "",
+        "type": "filters.overlay"
+    },
+    {
+        "type": "filters.assign",
+        "value": [
+            "Classification = 18 WHERE Buffer > 1",
+            "Classification = 12 WHERE Buffer == 1"
+        ]
+    },
+    {
+        "type": "filters.range",
+        "limits": "Buffer[:1]"
+    },
+    {
+        "type": "writers.las",
+        "filename": "",
+        "extra_dims": "Buffer=int16",
+        "minor_version": "4",
+        "forward": "all"
+    }
+]

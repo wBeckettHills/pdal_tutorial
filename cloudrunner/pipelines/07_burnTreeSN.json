@@ -1,0 +1,24 @@
+[
+    {
+        "type": "readers.las",
+        "filename": ""
+    },
+    {
+        "type": "filters.ferry",
+        "dimensions": "=>TreeSN"
+    },
+    {
+        "column": "TreeSN",
+        "datasource": "",
+        "dimension": "TreeSN",
+        "layer": "",
+        "type": "filters.overlay"
+    },
+    {
+        "type": "writers.las",
+        "filename": "",
+        "minor_version": "4",
+        "extra_dims": "all",
+        "forward": "all"
+    }
+]

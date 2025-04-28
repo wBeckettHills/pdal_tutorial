@@ -1,0 +1,34 @@
+[
+    {
+        "type": "readers.las",
+        "filename": ""
+    },
+    {
+        "type": "filters.smrf",
+        "cell": ".5",
+        "returns": "first, last, intermediate, only"
+    },
+    {
+        "type": "filters.hag_nn"
+    },
+    {
+        "type": "filters.assign",
+        "assignment": "HeightAboveGround[:0]=0.0",
+        "value": "Classification = 5 WHERE (HeightAboveGround >= 7)"
+    },
+    {
+        "type": "filters.assign",
+        "value": "Classification = 4 WHERE (HeightAboveGround >= 2 && HeightAboveGround < 7)"
+    },
+    {
+        "type": "filters.assign",
+        "value": "Classification = 3 WHERE (HeightAboveGround >= 0.25 && HeightAboveGround < 2)"
+    },
+    {
+        "type": "writers.las",
+        "minor_version": "4",
+        "extra_dims": "HeightAboveGround=float32,RadialDensity=float32,Buffer=int16",
+        "forward": "all",
+        "filename": ""
+    }
+]
