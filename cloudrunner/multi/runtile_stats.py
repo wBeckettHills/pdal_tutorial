@@ -36,7 +36,7 @@ def runtile_stats(lasfile):
     else:
         print(f"{output_path} already exists \n")
 
-    lidar_basename = os.path.basename(lasfile).split(".laz")[0]
+    lidar_basename = os.path.basename(lasfile).split(".las")[0]
     lidar_output = f"{output_path}/{lidar_basename}"
     copc_output = f"{copc_path}/{lidar_basename}"
 
@@ -62,7 +62,7 @@ def runtile_stats(lasfile):
 
     # Use the xy origin coords in the name
     copcname = f"{copc_output}_stats.copc.laz"
-    outname = f"{lidar_output}_stats.laz"
+    outname = f"{lidar_output}_stats.las"
 
     print(lasfile)
     print(outname)
@@ -105,7 +105,7 @@ def runtile_stats(lasfile):
         # -------------------------------------------------------------------- #
         print(f"Calculating Covariance Features = {calc_covar}")
         covar_copcname = f"{copcname.split('.copc.laz')[0]}_covar.copc.laz"
-        covar_outname = f"{outname.split('.laz')[0]}_covar.laz"
+        covar_outname = f"{outname.split('.las')[0]}_covar.las"
 
         print(covar_copcname)
         print(covar_outname)

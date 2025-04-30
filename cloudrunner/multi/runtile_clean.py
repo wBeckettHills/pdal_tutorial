@@ -19,9 +19,6 @@ def runtile_clean(lasfile):
     # basename = 'UW-ARBORETUM_20240517_Longenecker_lidar'
     # lidar_dir = f'{base_wd}/lidar'
 
-    buffer_size = 10.0
-    tile_size = 60.0
-
     # FILENAMES
     print(f"LAS file {lasfile} \n")
     lidar_dirname = os.path.dirname(os.path.dirname(lasfile))
@@ -33,51 +30,31 @@ def runtile_clean(lasfile):
     else:
         print(f"{output_path} already exists \n")
 
-    lidar_basename = os.path.basename(lasfile).split(".laz")[0]
+    lidar_basename = os.path.basename(lasfile).split(".las")[0]
     lidar_output = f"{output_path}/{lidar_basename}"
 
-    pipeline = pdal.Reader.las(lasfile).pipeline()
+    pipeline = pdal.Pipeline()
 
-    pipeline.execute()
-
-    # MAX MIN VALUES FOR CROP
-
-    zmin, zmax = 160, 370
-
-    buffer_size = 10.0
-    tile_size = 60.0
-
-    arr = pipeline.arrays[0].copy()
-    bxmin = arr["X"].min()
-    bymax = arr["Y"].max()
-    txmin = arr["X"].min() + buffer_size
-    tymax = arr["Y"].max() - buffer_size
-
-    print("Values:\n")
-    print("=" * 50)
-    print(f"Z elev min/max : {zmin} {zmax} \n")
-    print(f"Buffer Origin  : {bxmin} {bymax} \n")
-    print(f"Tile   Origin  : {txmin} {tymax} \n")
+    reader = pdal.Reader.las(lasfile)
 
     # Use the xy origin coords in the name
-    outname = f"{lidar_output}_{int(txmin)}_{int(tymax)}_cln.laz"
+    outname = f"{lidar_output}_cln.las"
 
-    print(lasfile)
-    print(outname)
+    print(f"LAS output {outname} \n")
 
     # OUTLIER IDENTIFICATION
-    outlier = pdal.Filter.outlier(method="statistical", multiplier=3, mean_k=8)
+    outlier = pdal.Filter.outlier(method="statistical", multiplier=2.2, mean_k=8)
 
     # OUTLIER REMOVAL
     rng = pdal.Filter.expression(
-        expression=f"(Classification != 7) && (Z >= {zmin} && Z <= {zmax})"
+        expression=f"(Classification != 7)"
     )
 
     # WRITE OUTPUT
     writer = pdal.Writer.las(outname, forward="all", extra_dims="all", minor_version=4)
 
     # add to Pipeline
-    pipeline |= outlier | rng | writer
+    pipeline |= reader | outlier | rng | writer
 
     # Run the pipeline
     pipeline.execute()

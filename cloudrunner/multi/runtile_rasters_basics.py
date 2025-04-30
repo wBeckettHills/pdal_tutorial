@@ -19,12 +19,6 @@ def runtile_rasters_basics(lasfile):
     #lidar_dir = f'{base_wd}/lidar'
 
 
-    zmin,zmax = 0.,50.
-    zutm_min,zutm_max = 165.,350.
-
-    buffer_size = 10.0
-    tile_size   = 60.0
-
     # FILENAMES
     print(f"LAS file {lasfile} \n")
     lidar_dirname = os.path.dirname(os.path.dirname(lasfile))
@@ -41,7 +35,7 @@ def runtile_rasters_basics(lasfile):
     if name.endswith(".copc.laz"):
         lidar_basename = name.split('.copc.laz')[0]
     else:
-        lidar_basename = name.split('.laz')[0]
+        lidar_basename = name.split('.las')[0]
     
     raster_output  = f"{output_path}/{lidar_basename}"
       
@@ -50,16 +44,10 @@ def runtile_rasters_basics(lasfile):
     
     # PIPELINE
     
-    pipeline = pdal.Reader.las(lasfile).pipeline()
-    pipeline.execute()
-    
-    arr   = pipeline.arrays[0].copy()
-    bxmin  = arr['X'].min()
-    bymax  = arr['Y'].max()
-    txmin  = arr['X'].min() + buffer_size
-    tymax  = arr['Y'].max() - buffer_size
+    pipeline = pdal.Pipeline()
 
-    bounds=f"([{txmin},{txmin+tile_size}],[{tymax-tile_size},{tymax}])"
+    reader = pdal.Reader.las(lasfile)
+    
 
     # RASTERS
 
@@ -90,7 +78,6 @@ def runtile_rasters_basics(lasfile):
                          data_type="float32",
                          gdaldriver=gdaldriver,
                          gdalopts="resampling_method=cubic",
-                         bounds=bounds,
                          output_type=rtype,
                          override_srs=out_crs,
                          window_size=window_size,
@@ -119,7 +106,6 @@ def runtile_rasters_basics(lasfile):
                          gdaldriver=gdaldriver,
                          override_srs=out_crs,
                          gdalopts="resampling_method=cubic",
-                         bounds=bounds,
                          output_type=rtype,
                          radius=radius,
                          power=power,
@@ -151,7 +137,6 @@ def runtile_rasters_basics(lasfile):
                          override_srs=out_crs,
                          output_type=rtype,
                          gdalopts="resampling_method=cubic",
-                         bounds=bounds,
                          radius=radius,
                          power=power,
                          window_size=window_size,
@@ -181,7 +166,6 @@ def runtile_rasters_basics(lasfile):
                          dimension=dimension,
                          data_type="float32",
                          gdaldriver=gdaldriver,
-                         bounds=bounds,
                          output_type=rtype,
                          override_srs=out_crs,
                          window_size=window_size,
@@ -221,7 +205,6 @@ def runtile_rasters_basics(lasfile):
                          data_type="float32",
                          gdaldriver=gdaldriver,
                          gdalopts="resampling_method=cubic",
-                         bounds=bounds,
                          output_type=rtype,
                          override_srs=out_crs,
                          window_size=window_size,
@@ -230,7 +213,7 @@ def runtile_rasters_basics(lasfile):
 
     
     # add to Pipeline
-    pipeline |= zmax | z | dsm | density | filt | dtm
+    pipeline |= reader | zmax | z | dsm | density | filt | dtm
 
     # Run the pipeline
     pipeline.execute()

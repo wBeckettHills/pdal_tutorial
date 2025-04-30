@@ -11,7 +11,7 @@ lidR::set_lidr_threads(1)
 tree_seg <- function(tilename){
     base_dir          = paste0(dirname(dirname(tilename)),"/tiles_trees")
     las_file_name     = basename(tilename)
-    base_name         = unlist(strsplit(las_file_name,".laz"))
+    base_name         = unlist(strsplit(las_file_name,".las"))
 
     tile_size = 60.0
     
@@ -30,7 +30,7 @@ tree_seg <- function(tilename){
     plot              = FALSE
     res_cm            = 25
     res_m             = res_cm / 100.0
-    las_output_type   = "laz"
+    las_output_type   = "las"
 
     las_file_suffix   = "tree-seg-w"
     #las_file          = paste0(base_dir,'/',las_file_name)

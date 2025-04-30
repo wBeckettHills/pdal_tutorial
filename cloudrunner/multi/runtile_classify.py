@@ -19,8 +19,6 @@ def runtile_classify(lasfile):
     # basename = 'UW-ARBORETUM_20240517_Longenecker_lidar'
     # lidar_dir = f'{base_wd}/lidar'
 
-    buffer_size = 10.0
-    tile_size = 60.0
 
     # FILENAMES
     print(f"LAS file {lasfile} \n")
@@ -34,42 +32,31 @@ def runtile_classify(lasfile):
     # else:
     #    print(f"{output_path} already exists \n")
 
-    lidar_basename = os.path.basename(lasfile).split(".laz")[0]
+    lidar_basename = os.path.basename(lasfile).split(".las")[0]
     lidar_output = f"{output_path}/{lidar_basename}"
     copc_output = f"{copc_path}/{lidar_basename}"
 
-    pipeline = pdal.Reader.las(lasfile).pipeline()
+    tile_id      = os.path.basename(lasfile).split("_cln.las")[0].split("lidar_")[-1]
+    tile_file    = f"{lidar_dirname}/tiles/AARS_DSMGrid_50m_utm16n_union_30m_{tile_id}.geojson"
+    polygon      = gpd.read_file(tile_file)
+    tile_polygon = polygon[polygon.loc[:,"Buffer"] == 0 ]
+    tile_wkt     = tile_polygon.union_all().wkt
 
-    pipeline.execute()
-
-    # MAX MIN VALUES FOR CROP
-
-    zmin, zmax = 0.0, 50.0
-
-    buffer_size = 10.0
-    tile_size = 60.0
-
-    arr = pipeline.arrays[0].copy()
-    bxmin = arr["X"].min()
-    bymax = arr["Y"].max()
-    txmin = arr["X"].min() + buffer_size
-    tymax = arr["Y"].max() - buffer_size
-
-    print("Values used for cropping:\n")
-    print("=" * 50)
-    print(f"Z elev min/max : {zmin} {zmax} \n")
-    print(f"Buffer Origin  : {bxmin} {bymax} \n")
-    print(f"Tile   Origin  : {txmin} {tymax} \n")
-
-    # Use the xy origin coords in the name
+    # Use the xy origin coords in the name 
     copcname = f"{copc_output}_grnd_hag.copc.laz"
-    outname = f"{lidar_output}_grnd_hag.laz"
+    outname = f"{lidar_output}_grnd_hag.las"
 
-    print(lasfile)
-    print(copcname)
+    print(f"Tile ID {tile_id} \n")
+    print(f"LAS out {outname} \n")
+    print(f"COPC out {copcname} \n")
+
+    # PDAL Pipeline
+    pipeline = pdal.Pipeline()
+
+    reader = pdal.Reader.las(lasfile)
 
     # GROUND CLASSIFICATION
-    ground = pdal.Filter.csf(resolution=0.5)
+    ground = pdal.Filter.csf(resolution=0.5, returns = "first, last, intermediate, only")
 
     # HAG --> Height Above Ground
     hag = pdal.Filter.hag_delaunay(count=25)
@@ -78,9 +65,10 @@ def runtile_classify(lasfile):
     changeZ = pdal.Filter.ferry(dimensions="Z => Z_UTM, HeightAboveGround => Z")
 
     # CROP BUFFER to TILE
-    crop = pdal.Filter.crop(
-        bounds=f"([{txmin},{txmin + tile_size}],[{tymax - tile_size},{tymax}],[{zmin},{zmax}])"
-    )
+    crop = pdal.Filter.crop(polygon=tile_wkt)
+    #crop = pdal.Filter.crop(
+    #    bounds=f"([{txmin},{txmin + tile_size}],[{tymax - tile_size},{tymax}],[{zmin},{zmax}])"
+    #)
 
     # Filter negatives to zero
     zero = pdal.Filter.assign(value="Z = 0. WHERE Z < 0.")
@@ -91,7 +79,7 @@ def runtile_classify(lasfile):
 
     # add to Pipeline
     # NOTE : writer includes buffer, copc has it removed
-    pipeline |= ground | hag | changeZ | zero | writer | crop | copc
+    pipeline |= reader | ground | hag | changeZ | zero | writer | crop | copc
 
     # Run the pipeline
     pipeline.execute()
