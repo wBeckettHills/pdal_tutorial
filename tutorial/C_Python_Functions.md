@@ -34,7 +34,7 @@ filepath = f"{wd}/{basename}.las"
 Python scripts and functions can be used in many ways. This repo uses a simple approach by keeping scripts with functions within particular relative directories to the notebooks being used.
 
 ### Scripts with Functions 
-Python functions contained in scripts is a convenient way to use them for code execution in jupyter cell blocks or other stand-alone scripts. This is simply 'a way' to illustrate the ability to modularize and more easily customize code to enhance workflows over time. 
+Python functions contained in scripts are a convenient way to use them for code execution in jupyter cell blocks or other stand-alone scripts. This is simply 'a way' to illustrate the ability to modularize and more easily customize code to enhance workflows over time. 
 
 The tutorial directory needs to be structured so the python `.py` files with the functions are located in directories `cloudrunner`, `notebooks`, `scripts`, and `tutorials` relatively located within the main working directory as outlined in the **Tree Diagram** section below. This ensures the notebooks can successfully `import` the python support scripts without issue.
 
