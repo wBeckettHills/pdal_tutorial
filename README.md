@@ -92,7 +92,7 @@ To accomplish this, this toolset uses the PDAL stages as a way to build and step
 
 ## SETUP
 
-The tutorials [README](tutorials/README.md) page contains detailed instructions on getting started.
+The tutorials [README](tutorial/README.md) page contains detailed instructions on getting started.
 
 ## Jupyter Notebooks
 
