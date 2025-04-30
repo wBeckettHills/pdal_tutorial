@@ -48,7 +48,7 @@ The imported function is now available to be run:
 runtile_classify(las_tile_path)
 ```
 #### Tree Diagram
-The filetree example below that shows how the directory structure can be used to access the functions within python files.
+The filetree example below shows how the directory structure should be organized for the `from .. import` statement shown above in order to access the functions within the python files.
 
 ```
 pdal_tutorial/
