@@ -43,7 +43,7 @@ The directories are separated by . with the import function(s) trailing:
 from cloudrunner.multi.runtile_classify import runtile_classify
 ```
 
-The imported function can now available to be run:
+The imported function is now available to be run:
 ```
 runtile_classify(las_tile_path)
 ```
