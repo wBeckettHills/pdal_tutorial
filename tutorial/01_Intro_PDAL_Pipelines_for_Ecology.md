@@ -3,9 +3,9 @@
 ## Overview
 <img src="https://github.com/wBeckettHills/cloudrunner/blob/main/graphics/CloudRunner-tile-oblique.png?raw=true" align='right' width=40%>
 
-Light Detection and Ranging (LiDAR) has increased the breadth of remote sensing applications for ecological research by providing detailed three-dimensional data on vegetation structure and terrain characteristics. The use of point clouds derived from LiDAR observations has led to fundamental .... such as ..., ..., and ... . For ecologists, LiDAR data enables the quantification of ecosystem structure, which is essential for biodiversity monitoring, conservation, and restoration efforts.
+Light Detection and Ranging (LiDAR) has increased the breadth of remote sensing applications for ecological research by providing detailed three-dimensional data on vegetation structure and terrain characteristics. For ecologists, LiDAR data enables the quantification of ecosystem structure, which is essential for biodiversity monitoring, conservation, and restoration efforts.
 
-This document introduces the Point Data Abstraction Library (PDAL) for processing LiDAR data in ecological applications, with particular attention to the differences between using pre-processed datasets versus handling raw data collected from drone platforms.
+This repository and set of tutorials introduces the Point Data Abstraction Library (PDAL) for processing LiDAR data in ecological applications, with particular attention to the differences between using pre-processed datasets versus handling raw data collected from drone platforms.
 
 ## PDAL: A Foundation for LiDAR Processing
 
@@ -79,6 +79,7 @@ The CloudRunner processing pipeline implements a workflow specifically designed 
 - Tag points with buffer attributes for later removal
 
 ### 2. Main Processing
+- **CLEAN**    : Outlier methods, flagging and removal
 - **GROUND**   : Classify ground points using PDAL algorithms (ground=2)
 - **CANOPY**   : Normalize vegetation heights using the ground classification
 - **SURFACES** : Create digital terrain and surface models from classified points
