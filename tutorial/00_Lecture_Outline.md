@@ -5,7 +5,7 @@
 Provide an experiential introduction to the beginning stages of LiDAR processing, such as cleaning and classifying, typically necessary to work with data acquired with a UAS. 
 
 ## The Problem
-Most publicly available datasets have reduced point cloud densities (2-5 points / m^2) and already have many processing steps completed, making it harder to find information or tools supporting these processing stages beyond a basic toy dataset level, and often lack methods suitable for very dense datasets (150-500+ points / m^2) common to acquisitions with UAS payloads. 
+Most publicly available datasets have reduced point cloud densities (2-5 points / m^2) and already have many processing steps completed. There are many tools supporting these processing stages beyond a basic toy dataset level, and often lack methods suitable for very dense datasets (150-500+ points / m^2) common to acquisitions with UAS payloads. 
 
 Dense point clouds often need to be broken down into tiles and processed using a parallelized approach in order to effectively handle the multiple preliminary cleaning, classification, and normalization stages. Scientific measurements with sensor payloads need an extra layer of transparency and reproducibilty in the form of configuration settings, workflow templates, and accurate metadata for file processing steps.
 
