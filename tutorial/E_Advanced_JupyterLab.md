@@ -20,7 +20,12 @@ conda activate cloudrunner
 >       - the `--notebooks` flag opens that path as the working directory
 
 ```
+jupyter lab --port=8090 --ip "*" --notebooks .
+
+OR 
+
 jupyter lab --port=8090 --ip "*" --notebooks ./pdal_tutorial/
+
 ```
 
 #### 3. Open Web Browser 
