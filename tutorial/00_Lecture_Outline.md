@@ -25,7 +25,7 @@ The primary *processing* objectives:
 1. Use ```Multiprocessing``` library to parallel process tiles across computer cores / threads
 
 ### Tutorial 
-Experiential outcomes to help achieve overall outcomes:
+Experiential outcomes to help achieve overall objectives:
 1. Introduce a way to use python functions from a personal repo ```cloudrunner``` 
 1. Inspect cloud attributes to assess processing
 1. Processing experience:
