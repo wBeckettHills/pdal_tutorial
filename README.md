@@ -33,7 +33,7 @@ To present LiDAR processing, the tutorials start with a single tile as a basis f
 
 ### Copy, Choose, Create
 
-The workflows can provide templates to *copy* and *choose* from in order to understand the key elements it takes to *create* new workflows to be applied in in across various sensors, sites, and datasets:
+The workflows can provide templates to *copy* and *choose* from in order to understand the key elements it takes to *create* new workflows to be applied across various sensors, sites, and datasets:
 
 - **Filtering decisions**       - coarse vs. fine + flagging vs. removal
 - **Tiling & multiprocessing**  - optimizing a buffered cookie cutter
