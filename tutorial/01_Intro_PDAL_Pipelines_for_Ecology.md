@@ -20,7 +20,7 @@ PDAL offers several key capabilities that make it particularly useful for ecolog
 5. **Python Integration**: Offers a Python API for integration with other scientific tools
 
 ## Pre-processed LiDAR Data vs. Drone-Collected Data
-Working with pre-processed LiDAR data (e.g., from government agencies or commercial providers) requires less investment, since many steps have already been performed. While this can save time and funding, as well as create a baseline for assumptions** (expand on this more), the data coverage may be insufficient or unavailable. In many cases, municipalities may only provide leaf-off LiDAR (link to Wisconsin data here), which can significantly reduce levels of inquiry and application for research projects stufying vegetation. 
+Working with pre-processed LiDAR data (e.g., from government agencies or commercial providers) requires less investment, since many steps have already been performed. While this can save time and funding, as well as create a baseline for assumptions** (expand on this more), the data coverage may be insufficient or unavailable. In many cases, municipalities may only provide leaf-off LiDAR ([City of Madison 2022](https://geodata.wisc.edu/catalog/660e4c36-b3ee-4a9f-9a72-aea4562164af)), which can significantly reduce levels of inquiry and application for research projects stufying vegetation. 
 
 >City of Madison 2022 LiDAR Metadata : 
 >LiDAR data was acquired using the RIEGL VQ1560i lidar sensor with serial number SN4040 on April 10, 2022 in 1 total lift. Acquisition occurred with leaves absent from deciduous trees, when no snow was present on the ground, and with rivers at or below normal levels.
