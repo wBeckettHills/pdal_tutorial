@@ -162,8 +162,9 @@ Example pipeline with those elements:
 ]
 ```
 
+### `Python` 
 
-`Python` A pure-python approach can also be done, which is useful for chaining together stages and pipelines in a single script. 
+A pure-python approach can also be done, which is useful for chaining together stages and pipelines in a single script. 
 
 Example pipeline with those elements:
 
