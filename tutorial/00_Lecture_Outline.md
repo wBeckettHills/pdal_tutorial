@@ -20,7 +20,7 @@ The primary *teaching* objectives:
 1. Intro to python functions, scripts, and relevant skills needed for LiDAR
 
 The primary *processing* objectives:
-1. Copy, slightly modify, and run existing code
+1. Copy, slightly modify, and run existing code `cloudrunner`
 1. Use ```PDAL``` library to process lidar tiles 
 1. Use ```Multiprocessing``` library to parallel process tiles across computer cores / threads
 
