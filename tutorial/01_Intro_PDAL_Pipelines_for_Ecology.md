@@ -120,7 +120,9 @@ Drone-collected LiDAR presents several unique challenges compared to using pre-p
 
 ## PDAL Pipelines for Ecological Applications
 
-PDAL utilizes a pipeline concept to chain together processing steps. A typical PDAL pipeline is defined in JSON format and can be executed through command-line tools. The CloudRunner workflow builds on this approach to create standardized processing steps for ecological applications.
+PDAL utilizes a pipeline concept to chain together processing steps. The tutorials will present two ways (`JSON` and `Python`) to leverage the pipeline construction, each with their merits. They are not mutually exclusive and can be used together to create complex workflows.
+
+The CloudRunner workflow builds on this approach to create standardized processing steps for ecological applications.
 
 Example pipeline components might include:
 
@@ -132,7 +134,12 @@ Pseudo-code
 - write output
 ```
 
-Actual pipeline with those elements:
+Here's how this looks in the two forms: `JSON` and `Python`.
+
+### `JSON` 
+A typical PDAL pipeline is defined in JSON format and can be executed through command-line tools, facilitating a way to create reproducible workflows and batch process.
+
+Example pipeline with those elements:
 
 ```json
 [
@@ -154,6 +161,36 @@ Actual pipeline with those elements:
     }
 ]
 ```
+
+
+`Python` A pure-python approach can also be done, which is useful for chaining together stages and pipelines in a single script. 
+
+Example pipeline with those elements:
+
+```
+# - Initialize PIPELINE
+proc_pipeline = pdal.Pipeline()
+
+# - READER
+reader = pdal.Reader.las(filename=f"{base_las}_c.las")
+
+# - GROUND CLASSIFICATION
+ground = pdal.Filter.csf(resolution=2.0,returns="first, last,intermediate,only")
+
+# - HAG --> Height Above Ground
+hag = pdal.Filter.hag_delaunay(count=25)
+
+# - WRITER
+writer = pdal.Writer.las(f"{base_las}_cg.las")
+
+# - Build PIPELINE
+proc_pipeline |= reader | ground | hag writer
+
+# - Execute PIPELINE
+proc_pipeline.execute()
+```
+
+The tutorials will incorporate both styles and show multiple approaches that can be used and built upon for future developments.
 
 ## Conclusion
 
