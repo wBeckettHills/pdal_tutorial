@@ -40,6 +40,9 @@ The tutorial directory needs to be structured so the python `.py` files with the
 
 The directories are separated by . with the import function(s) trailing:
 ```
+import sys
+sys.path.append(f'/path/to/pdal_tutorial')
+
 from cloudrunner.multi.runtile_classify import runtile_classify
 ```
 
