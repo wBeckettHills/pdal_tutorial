@@ -126,7 +126,7 @@ The CloudRunner workflow builds on this approach to create standardized processi
 
 Example pipeline components might include:
 
-Pseudo-code
+Pseudo-code to describe steps:
 ```
 - read input
 - classify ground (pmf algorithm)
@@ -134,14 +134,14 @@ Pseudo-code
 - write output
 ```
 
-Here's how this looks in the two forms: `JSON` and `Python`.
+Here's how the pseudo-code looks in the two forms: `JSON` and `Python`.
 
 ### `JSON` 
 A typical PDAL pipeline is defined in JSON format and can be executed through command-line tools, facilitating a way to create reproducible workflows and batch process.
 
-Example pipeline with those elements:
+Example `json` pipeline with pseudo-code steps:
 
-```json
+```
 [
     {
         "type": "readers.las",
@@ -166,7 +166,7 @@ Example pipeline with those elements:
 
 A pure-python approach can also be done, which is useful for chaining together stages and pipelines in a single script. 
 
-Example pipeline with those elements:
+Example `python` pipeline with pseudo-code steps:
 
 ```
 # - Initialize PIPELINE
