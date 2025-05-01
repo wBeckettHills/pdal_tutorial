@@ -185,7 +185,7 @@ hag = pdal.Filter.hag_delaunay(count=25)
 writer = pdal.Writer.las(f"{base_las}_cg.las")
 
 # - Build PIPELINE
-proc_pipeline |= reader | ground | hag writer
+proc_pipeline |= reader | ground | hag | writer
 
 # - Execute PIPELINE
 proc_pipeline.execute()
@@ -195,7 +195,7 @@ The tutorials will incorporate both styles and show multiple approaches that can
 
 ## Conclusion
 
-While using pre-processed LiDAR data offers a simpler path to analysis, drone-collected LiDAR provides greater customization and up-to-date information but requires significantly more processing steps. The CloudRunner workflow addresses these challenges by implementing a standardized PDAL-based processing pipeline specifically for ecological applications, handling the technical complexities of LiDAR processing while enabling researchers to focus on ecological questions.
+Using pre-processed LiDAR data offers a simpler path to analysis. Drone-collected LiDAR provides greater customization and up-to-date information, but requires significantly more processing steps. The CloudRunner repo is an example set of workflows built to address these challenges by implementing a standardized `PDAL`-based processing pipeline. With additional goals tageting ecological applications, the teaching tutorials and notebooks can enable proficient LiDAR processing, providing researchers broader access to procedures and metrics for addressing ecological questions.
 
 ## References
 
