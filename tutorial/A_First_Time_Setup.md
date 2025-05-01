@@ -62,7 +62,7 @@ To use jupyter notebooks, there are two good (free) options:
         ```
         conda activate my_environment
         conda install jupyter jupyterlab
-        jupyterlab
+        jupyter-lab
         ```
 
 Now, you should be ready to create conda environments, install packages, and open and run notebooks on your local machine. 
