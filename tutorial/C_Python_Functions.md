@@ -76,7 +76,7 @@ pdal_tutorial/
     │       └── test_colorize.py
     ├── data
     │   ├── lidar
-    │   │   ├── raw
+    │   │   ├── raw_input
     │   │   └── tiles
     │   ├── shapes
     │   └── tif
